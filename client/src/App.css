@@ -7,6 +7,11 @@
 .App-postForm {
   margin-top: 40px;
   width: 600px;
+  display: flex;
+}
+
+.App-textInputContainer {
+  flex: 2;
 }
 
 .App-postFormActions {

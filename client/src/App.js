@@ -1,6 +1,7 @@
 import { Card, CardHeader, CardText } from 'material-ui/Card';
 import AppBar from 'material-ui/AppBar';
 import classNames from 'classnames';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import http from 'superagent';
 import io from 'socket.io-client';
 import moment from 'moment';
@@ -10,6 +11,12 @@ import React, { Component } from 'react';
 import TextField from 'material-ui/TextField';
 
 import './App.css';
+
+const muiTheme = getMuiTheme({
+  palette: {
+    primary1Color: '#D32F2F'
+  }
+});
 
 class App extends Component {
   constructor(props) {
@@ -25,24 +32,27 @@ class App extends Component {
 
   render() {
     return (
-      <MuiThemeProvider>
+      <MuiThemeProvider muiTheme={muiTheme}>
         <div className="App">
           <AppBar iconElementLeft={<div />} />
           <div className="App-main">
             <form className="App-postForm" onSubmit={this._handleSubmit}>
-              <TextField
-                className="App-textInput"
-                disabled={this.state.isPosting}
-                id="App-textInput"
-                value={this.state.text}
-                onChange={this._handleChangeTextInput}
-                fullWidth hintText="What's happening?"
-                autoComplete="off"
-                errorText={this.state.text.length > 140 ? "Must be fewer than 140 characters" : undefined}
-              />
-              <div className="App-postFormActions">
-                <span>{140 - this.state.text.length}</span>
-                <RaisedButton type="submit" primary label="Post" disabled={this.state.isPosting || this.state.text.length === 0 || this.state.text.length > 140} />
+              <img src="/cub.jpg" alt="Ludldow lion cub" />
+              <div className="App-textInputContainer">
+                <TextField
+                  className="App-textInput"
+                  disabled={this.state.isPosting}
+                  id="App-textInput"
+                  value={this.state.text}
+                  onChange={this._handleChangeTextInput}
+                  fullWidth hintText="What's happening?"
+                  autoComplete="off"
+                  errorText={this.state.text.length > 140 ? "Must be fewer than 140 characters" : undefined}
+                />
+                <div className="App-postFormActions">
+                  <span>{140 - this.state.text.length}</span>
+                  <RaisedButton type="submit" primary label="Post" disabled={this.state.isPosting || this.state.text.length === 0 || this.state.text.length > 140} />
+                </div>
               </div>
             </form>
             <div className="App-posts">
