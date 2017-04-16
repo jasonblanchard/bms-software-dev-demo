@@ -16,7 +16,7 @@ const io = socketio(server);
 const posts = [
   {
     id: uuid(),
-    text: 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.',
+    text: 'Ullamcorper sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.',
     timeCreated: '2017-04-16T11:27:39-04:00'
   },
   {

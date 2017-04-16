@@ -1,5 +1,6 @@
 import { Card, CardHeader, CardText } from 'material-ui/Card';
 import AppBar from 'material-ui/AppBar';
+import classNames from 'classnames';
 import http from 'superagent';
 import io from 'socket.io-client';
 import moment from 'moment';
@@ -17,7 +18,8 @@ class App extends Component {
     this.state = {
       text: '',
       posts: [],
-      isPosting: false
+      isPosting: false,
+      newPostId: undefined
     };
   }
 
@@ -53,8 +55,9 @@ class App extends Component {
   }
 
   _renderPost = post => {
+    const className = classNames('App-post', { isNew: post.id === this.state.newPostId });
     return (
-      <Card key={post.id}>
+      <Card className={className} key={post.id}>
         <CardHeader subtitle={moment(post.timeCreated).fromNow()} />
         <CardText>
           {post.text}
@@ -68,8 +71,16 @@ class App extends Component {
     socket.on('newPost', post => {
       this.setState(prevState => ({
         ...prevState,
-        posts: [ post, ...prevState.posts ]
+        posts: [ post, ...prevState.posts ],
+        newPostId: post.id,
       }));
+
+      setTimeout(() => {
+        this.setState(prevState => ({
+          ...prevState,
+          newPostId: undefined
+        }));
+      }, 50);
     });
 
     http.get('/api/posts')
