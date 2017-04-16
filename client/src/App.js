@@ -1,6 +1,7 @@
 import { Card, CardHeader, CardText } from 'material-ui/Card';
 import AppBar from 'material-ui/AppBar';
 import http from 'superagent';
+import io from 'socket.io-client';
 import moment from 'moment';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -63,19 +64,30 @@ class App extends Component {
   }
 
   componentDidMount() {
+    const socket = io();
+    socket.on('newPost', post => {
+      this.setState(prevState => ({
+        ...prevState,
+        posts: [ post, ...prevState.posts ]
+      }));
+    });
+
     http.get('/api/posts')
       .send()
       .then(response => {
-        this.setState({
+        this.setState(prevState => ({
+          ...prevState,
           posts: response.body
-        });
+        }));
       });
   }
 
   _handleChangeTextInput = (event) => {
-    this.setState({
-      text: event.target.value
-    });
+    const text = event.target.value;
+    this.setState(prevState => ({
+      ...prevState,
+      text
+    }));
   }
 
   _handleSubmit = (event) => {
@@ -85,11 +97,11 @@ class App extends Component {
       http.post('/api/posts')
         .send({ text: this.state.text })
         .then(response => {
-          console.log(response.body);
-          this.setState({
+          this.setState(prevState => ({
+            ...prevState,
             text: '',
             isPosting: false,
-          });
+          }));
         });
     });
   }

@@ -2,12 +2,14 @@ import bodyParser from 'body-parser';
 import express from 'express';
 import http from 'http';
 import moment from 'moment';
+import socketio from 'socket.io';
 import uuid from 'uuid/v4';
 
 const app = express();
 app.use(bodyParser.json());
 
 const server = http.Server(app);
+const io = socketio(server);
 
 const posts = [
   {
@@ -30,6 +32,10 @@ app.get('/api/posts', (request, response) => {
   response.json(posts);
 });
 
+io.on('connection', () => {
+  console.log('client connected');
+});
+
 app.post('/api/posts', (request, response) => {
   const post = {
     id: uuid(),
@@ -37,6 +43,7 @@ app.post('/api/posts', (request, response) => {
     timeCreated: moment().format()
   }
   posts.unshift(post);
+  io.emit('newPost', post);
   response.json(post);
 });
 
