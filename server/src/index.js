@@ -2,11 +2,13 @@ import bodyParser from 'body-parser';
 import express from 'express';
 import http from 'http';
 import moment from 'moment';
+import morgan from 'morgan';
 import socketio from 'socket.io';
 import uuid from 'uuid/v4';
 
 const app = express();
 app.use(bodyParser.json());
+app.use(morgan('common'));
 
 const server = http.Server(app);
 const io = socketio(server);
@@ -37,6 +39,7 @@ io.on('connection', () => {
 });
 
 app.post('/api/posts', (request, response) => {
+  console.log('request body: ', request.body);
   const post = {
     id: uuid(),
     text: request.body.text,
