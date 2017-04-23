@@ -8,7 +8,8 @@ import uuid from 'uuid/v4';
 
 const app = express();
 app.use(bodyParser.json());
-app.use(morgan('common'));
+morgan.token('body', function (req) { return JSON.stringify(req.body) });
+app.use(morgan(':method :url :status :body - :response-time ms'));
 
 const server = http.Server(app);
 const io = socketio(server);
@@ -41,7 +42,7 @@ io.on('connection', () => {
 });
 
 app.post('/api/posts', (request, response) => {
-  console.log('request body: ', request.body);
+  // console.log('request body: ', request.body);
   const post = {
     id: uuid(),
     text: request.body.text,
