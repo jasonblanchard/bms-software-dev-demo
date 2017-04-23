@@ -37,7 +37,6 @@ class App extends Component {
           <AppBar iconElementLeft={<div />} />
           <div className="App-main">
             <form className="App-postForm" onSubmit={this._handleSubmit}>
-              <img src="/cub.jpg" alt="Ludldow lion cub" />
               <div className="App-textInputContainer">
                 <TextField
                   className="App-textInput"
