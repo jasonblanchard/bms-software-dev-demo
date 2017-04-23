@@ -17,12 +17,14 @@ const posts = [
   {
     id: uuid(),
     text: 'Ullamcorper sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.',
-    timeCreated: '2017-04-16T11:27:39-04:00'
+    timeCreated: '2017-04-16T11:27:39-04:00',
+    isBot: false
   },
   {
     id: uuid(),
     text: 'Curabitur blandit tempus porttitor.',
     timeCreated: '2017-04-14T11:27:13-04:00',
+    isBot: false
   },
 ];
 
@@ -43,7 +45,8 @@ app.post('/api/posts', (request, response) => {
   const post = {
     id: uuid(),
     text: request.body.text,
-    timeCreated: moment().format()
+    timeCreated: moment().format(),
+    isBot: request.body.isBot
   }
   posts.unshift(post);
   io.emit('newPost', post);

@@ -67,7 +67,7 @@ class App extends Component {
     const className = classNames('App-post', { isNew: post.id === this.state.newPostId });
     return (
       <Card className={className} key={post.id}>
-        <CardHeader subtitle={moment(post.timeCreated).fromNow()} />
+        <CardHeader title={post.isBot ? 'Bot' : 'Human'} subtitle={moment(post.timeCreated).fromNow()} avatar={post.isBot ? '/bot.png' : '/anon.png'} />
         <CardText>
           {post.text}
         </CardText>
