@@ -2,11 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 10px;
 }
 
 .App-postForm {
   margin-top: 40px;
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
   display: flex;
 }
 
@@ -21,7 +23,7 @@
 
 .App-posts {
   margin-top: 40px;
-  width: 600px;
+  max-width: 600px;
 }
 
 .App-post.isNew {

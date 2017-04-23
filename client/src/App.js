@@ -44,7 +44,7 @@ class App extends Component {
                   id="App-textInput"
                   value={this.state.text}
                   onChange={this._handleChangeTextInput}
-                  fullWidth hintText="What's happening?"
+                  fullWidth hintText="Say something!"
                   autoComplete="off"
                   errorText={this.state.text.length > 140 ? "Must be fewer than 140 characters" : undefined}
                 />
