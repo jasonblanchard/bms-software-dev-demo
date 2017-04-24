@@ -31,4 +31,6 @@ function sendPost() {
     setTimeout(sendPost, timeoutDuration);
 }
 
+console.log('Starting the bot!');
+
 sendPost();
