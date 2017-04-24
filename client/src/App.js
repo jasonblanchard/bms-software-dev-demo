@@ -55,7 +55,7 @@ class App extends Component {
               </div>
             </form>
             <div className="App-posts">
-              {this.state.posts.map(this._renderPost)}
+              {this.state.posts.slice(0, 20).map(this._renderPost)}
             </div>
           </div>
         </div>
