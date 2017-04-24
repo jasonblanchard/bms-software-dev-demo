@@ -1,3 +1,5 @@
+This document describes how to run this web development demo. You can also [learn more about software development in general](software-development.md).
+
 # web-dev-demo
 This is a small web app to demonstrate Web and mobile software development. There are 3 parts:
 
