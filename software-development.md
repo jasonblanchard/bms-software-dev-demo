@@ -1,7 +1,7 @@
 # Software Development Career Information
 
 ## What is software development?
-The apps on your phone, websites you visit and even desktop applications like Spotify are all software. Software is a set of instructions written in a programming language (code) that computers understand. A "software developer" writes this code to make the software useful for the end user.
+The apps on your phone, websites you visit, applications on your computer and even some of the technology in a car are all software. Software is a set of instructions written in a programming language (code) that computers understand. A "software developer" writes this code to make the software useful for the end user.
 
 There are many aspects of software development - coming up with ideas (i.e. "product development"), writing the application code, designing the user interface, and maintaining the server resources, so there are many different people involved in the process.
 
