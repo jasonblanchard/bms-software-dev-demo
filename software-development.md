@@ -6,14 +6,14 @@ The apps on your phone, websides you visit and even desktop applications like Sp
 There are many aspects of software development - coming up with ideas (i.e. "product development"), writing the application code, designing the user interface, and maintaining the server resources, so there are many different aspects and people involved in the process.
 
 ## Where do software developers work?
-Software developers work all over the world. Some software developers work for companies that specialize in building software applications who are hired by people who need to make applications. Others work directly for companies that have software products. Even big companies like Walmart, Comcast and Bank of America have many software developers helping to keep all their services running and to come up with innovative new ideas to keep the companies successful. Some software developers even work for themselves writing small applications or consulting with larger companies.
+Software developers work all over the world. Some software developers work for companies that specialize in building software applications that are hired by people who need to make applications. Others work directly for companies that have software products, like Google, Facebook or Snapchat. Even big companies like Walmart, Comcast and Bank of America have many software developers helping to keep all their services running and to come up with innovative new ideas. Some software developers even work for themselves writing small applications or consulting with larger companies.
 
 ## How do I become a software developer?
-Since there are so many different parts of the software development process (product development, design, engineering, coding, etc), there are many learning paths you can take to become a software developer. Since a lot of software development is engineering using logic and numbers, a strong background in math and science helps. "Soft sciences" like visual arts and psychology is also an essential parts to designing software interfaces for human users.
+Since there are so many different parts of the software development process (product development, design, engineering, etc), there are many learning paths you can take to become a software developer. Since a lot of software development and writing code is basically engineering using logic and numbers, a strong background in math and science helps. However, "soft sciences" like visual arts and psychology are also essential aspects of designing software interfaces for human users.
 
-Majors that
-- Computers science
+Majors that will help you be a successful software developer:
 - Computer engineering
+- Computers science
 - Math
 - Visual media arts
 - Gaphic design
