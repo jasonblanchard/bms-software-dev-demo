@@ -33,7 +33,13 @@ $ git clone git@github.com:jasonblanchard/bms-software-dev-demo.git
 In the terminal, use the `cd` command to go into the `bms-software-dev-demo` directory. 
 
 ## Starting the API
-In the terminal, run this command inside the `bms-software-dev-demo` directory to start the API server:
+In the terminal, run this command inside the `bms-software-dev-demo` directory to install the dependencies (you only have to do this once):
+
+```
+$ yarn install
+```
+
+Then run this to start the API server:
 
 ```
 $ yarn watch
@@ -42,7 +48,10 @@ $ yarn watch
 You should see the text `Listening on 8082` in the command line.
 
 ## Starting the Web client
-Open up a new terminal window and `cd` into the `bms-software-dev-demo/client` directory. Run this command to start the Web client:
+Open up a new terminal window and `cd` into the `bms-software-dev-demo/client` directory. Run this command to install the dependencies (you only have to do this once):
+
+
+Then run this command to start the Web client:
 
 ```
 $ yarn start
