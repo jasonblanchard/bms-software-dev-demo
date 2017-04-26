@@ -1,6 +1,6 @@
 This document describes how to run this web development demo. If you're not ready for that yet or just want to learn more about software development in general, read this [Software Development Career Information](software-development.md) document.
 
-# web-dev-demo
+# bms-software-dev-demo
 This is a small web app to demonstrate Web and mobile software development. There are 3 parts:
 
 - A *server-side API* that accepts HTTP requests. This usually runs on a "server" in a remote data center, but you can run it locally on your computer for development. All the code for the APi server is in the `server/` directory (a "directory" is just a folder on your computer).
@@ -27,13 +27,13 @@ If you get stuck on any of the steps, try researching the underlying technologie
 Use Git to clone the codebase from this website:
 
 ```
-$ git clone git@github.com:jasonblanchard/web-dev-demo.git
+$ git clone git@github.com:jasonblanchard/bms-software-dev-demo.git
 ```
 
-Use the `cd` command to go into the `web-dev-demo` directory. 
+Use the `cd` command to go into the `bms-software-dev-demo` directory. 
 
 ## Starting the API
-Run this command inside the `web-dev-demo` directory to start the API server:
+Run this command inside the `bms-software-dev-demo` directory to start the API server:
 
 ```
 $ yarn watch
@@ -42,7 +42,7 @@ $ yarn watch
 You should see the text `Listening on 8082` in the command line.
 
 ## Starting the Web client
-Open up a new command line window and `cd` into the `web-dev-demo/client` directory. Run this command to start the Web client:
+Open up a new command line window and `cd` into the `bms-software-dev-demo/client` directory. Run this command to start the Web client:
 
 ```
 $ yarn start
@@ -51,7 +51,7 @@ $ yarn start
 You should see `Compiled successfully!` in the terminal. A browser window should open the client application. If it doesn't try typing this into the URL bar in your browser: `http://localhost:3000`
 
 ## Starting the automated bot
-Open up a new terminal window, and `cd` into the `web-dev-demo` directory. Run this command to start the bot:
+Open up a new terminal window, and `cd` into the `bms-software-dev-demo` directory. Run this command to start the bot:
 
 ```
 $ yarn start-bot
