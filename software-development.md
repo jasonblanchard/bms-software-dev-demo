@@ -18,4 +18,4 @@ Majors that will help you be a successful software developer:
 - Visual media arts
 - Gaphic design
 
-There are some great resources on the Internet to get you started, too, like [Code School](https://www.codeschool.com/) and [Code Academy](https://www.codecademy.com/).
+There are some great resources on the Internet to get you started, too, like [Code School](https://www.codeschool.com/), [Code Academy](https://www.codecademy.com/) and [Girl Develop It](https://www.girldevelopit.com/materials).
