@@ -92,7 +92,7 @@ class App extends Component {
       }, 50);
     });
 
-    http.get('/api/posts')
+    http.get('http://localhost:8082/api/posts')
       .send()
       .then(response => {
         this.setState(prevState => ({
@@ -114,7 +114,7 @@ class App extends Component {
     event.preventDefault();
 
     this.setState({ isPosting: true}, () => {
-      http.post('/api/posts')
+      http.post('http://localhost:8082/api/posts')
         .send({ text: this.state.text })
         .then(response => {
           this.setState(prevState => ({

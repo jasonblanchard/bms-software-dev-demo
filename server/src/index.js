@@ -1,4 +1,5 @@
 import bodyParser from 'body-parser';
+import cors from 'cors';
 import express from 'express';
 import http from 'http';
 import moment from 'moment';
@@ -10,6 +11,7 @@ const app = express();
 app.use(bodyParser.json());
 morgan.token('body', function (req) { return JSON.stringify(req.body) });
 app.use(morgan(':method :url :status :body - :response-time ms'));
+app.use(cors());
 
 const server = http.Server(app);
 const io = socketio(server);
