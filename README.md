@@ -3,7 +3,7 @@ This document describes how to run this web app demo. If you're not ready for th
 # bms-software-dev-demo Web App
 This is a small web app to demonstrate Web and mobile software development. There are 3 parts:
 
-- A *server-side API* that accepts HTTP requests. This usually runs on a "server" in a remote data center, but you can run it locally on your computer for development. All the code for the APi server is in the `server/` directory (a "directory" is just a folder on your computer).
+- A *server-side API* that accepts HTTP requests. This usually runs on a "server" in a remote data center, but you can run it locally on your computer for development. All the code for the API server is in the `server/` directory (a "directory" is just a folder on your computer).
 - A browser-based *web client app*. This is the application that you see in your browser. All the code for the web client is in the `/client` directory.
 - A *bot* that is programmed to behave like a user interacting with the app. It randomly posts lines from the movie Back To The Future, but can be modified to post about anything. All the code for the bot is in the `bot/` directory.
 
@@ -57,7 +57,7 @@ Then run this command to start the Web client:
 $ yarn start
 ```
 
-You should see `Compiled successfully!` in the terminal. A browser window should open the client application. If it doesn't try typing this into the URL bar in your browser: `http://localhost:3000`
+You should see `Compiled successfully!` in the terminal. A browser window should open the client application. If it doesn't, try typing this into the URL bar in your browser: `http://localhost:3000`
 
 ## Starting the automated bot
 Open up a new terminal window, and `cd` into the `bms-software-dev-demo` directory. Run this command to start the bot:
